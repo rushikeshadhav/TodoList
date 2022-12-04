@@ -1,15 +1,15 @@
 // URL PATH
 const express = require("express");
 const {
-  home,
   createUser,
-  getUsers,
-  editUser,
+  loginUser,
+  getUser,
 } = require("../controllers/userControllers");
+const userAuth = require("../middleware/userAuth");
 const router = express.Router();
 
 router.post("/u/createUser", createUser);
-router.post("/u/loginUser", getUsers);
-router.get("/u/getUser", editUser);
+router.post("/u/login", loginUser);
+router.get("/u/getUser", userAuth, getUser);
 
 module.exports = router;

@@ -5,7 +5,7 @@ const {
   editTodo,
   deleteTodo,
   searchTodos,
-} = require("../controller/todoControllers");
+} = require("../controllers/todoControllers");
 const userAuth = require("../middleware/userAuth");
 
 const router = express.Router();
