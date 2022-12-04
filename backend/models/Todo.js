@@ -5,7 +5,7 @@ const toDoSchema = new mongoose.Schema(
     title: String,
     color: String,
     user: {
-      typr: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "user",
     },
     date: {
